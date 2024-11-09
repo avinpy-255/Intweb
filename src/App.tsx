@@ -1,21 +1,15 @@
-import React, { useState } from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import HomePage from './pages/HomePage';
-import RoomPage from './pages/RoomPage';
-import RoomCreationModal from './modals/RoomCreationModal';
-
-const App: React.FC = () => {
-  const [showModal, setShowModal] = useState(false);
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom"
+import Home from "./pages/Home"
+function App() {
 
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<HomePage openModal={() => setShowModal(true)} />} />
-        <Route path="/room" element={<RoomPage />} />
+        <Route path="/" element={<Home/>} />
+        <Route path="/room/:roomCode"/>
       </Routes>
-      <RoomCreationModal isOpen={showModal} onClose={() => setShowModal(false)} />
     </Router>
-  );
-};
+  )
+}
 
-export default App;
+export default App
