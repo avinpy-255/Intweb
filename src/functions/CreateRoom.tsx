@@ -12,8 +12,10 @@ import {
 import { Label } from "@/components/ui/label";
 import { Input } from "@/components/ui/input";
 import axiosService from "@/lib/axios";
+import { useNavigate } from '@tanstack/react-router';
 
 const CreateRoom: React.FC = () => {
+    const navigate =  useNavigate()
     const [name, setName] = useState<string>("");
 
     const handleCreateRoom = (event: React.ChangeEvent<HTMLInputElement>): void => {
@@ -26,8 +28,10 @@ const CreateRoom: React.FC = () => {
         const url: string = '/';
         const response = await axiosService.post<{ status: number }>(url, { name });
   
-        if (response.status === 200) {
+        if (response.status === 201) {
           console.log('Room created successfully');
+          navigate({to: "/" })
+          
         }
       } catch (error) {
         console.log(error);
