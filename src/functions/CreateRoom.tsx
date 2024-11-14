@@ -13,6 +13,7 @@ import { Label } from "@/components/ui/label"
 import { Input } from "@/components/ui/input"
 import axiosService from "@/lib/axios"
 import { useNavigate } from '@tanstack/react-router'
+import RingLoader from 'react-spinners/RingLoader'
 
 
 interface RoomResponse {
@@ -105,7 +106,7 @@ const CreateRoom: React.FC = () => {
             disabled={isLoading}
             className="w-full"
           >
-            {isLoading ? "Creating..." : "Create Room"}
+            {isLoading ? <RingLoader size={18} /> : "Create Room"}
           </Button>
           <DialogDescription>
             This Site is Under Development
