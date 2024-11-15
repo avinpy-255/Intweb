@@ -21,3 +21,18 @@ export const getRooms = async (): Promise<RoomData[] | []> => {
     return [];
   }
 };
+
+export const getRoomsbyId = async (id: string): Promise<RoomData | null>=> {
+  try {
+    const response = await axiosService.get<RoomData>(`/${id}`)
+    const {status, data} = response
+    if (status === 200){
+      return data
+    }
+    return null
+  } catch (error) {
+    console.log(error)
+    return null
+  }
+
+}

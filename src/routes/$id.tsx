@@ -1,16 +1,21 @@
+import { createFileRoute } from "@tanstack/react-router";
+import { SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar";
+import { AppSidebar } from "@/pages/Room";
 
-import { createFileRoute } from '@tanstack/react-router'
-
-export const Route = createFileRoute('/$id')({
+export const Route = createFileRoute("/$id")({
   component: RoomID,
+});
 
-})
-
-function RoomID() {
- 
+function RoomID({ children }: { children: React.ReactNode }) {
   return (
     <>
-     <h1>Room page is underDevelopment</h1>
+      <SidebarProvider>
+        <AppSidebar />
+        <main>
+          <SidebarTrigger />
+          {children}
+        </main>
+      </SidebarProvider>
     </>
-  )
+  );
 }
