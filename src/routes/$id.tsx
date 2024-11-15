@@ -10,7 +10,7 @@ function RoomID() {
  
   return (
     <>
-     <h1>Room</h1>
+     <h1>Room page is underDevelopment</h1>
     </>
   )
 }
