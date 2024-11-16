@@ -1,5 +1,6 @@
 import CreateRoom from "@/functions/CreateRoom";
 import "../assets/fonts/CosmicDream/AppleGaramond.ttf";
+import JoinRoom from "@/functions/JoinRoom";
 
 
 function Home() {
@@ -11,6 +12,7 @@ function Home() {
         Cosmic Code
       </h1>
       <CreateRoom />
+      <JoinRoom/>
     </div>
  
 
