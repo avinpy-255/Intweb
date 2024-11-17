@@ -26,7 +26,7 @@ const JoinRoom: React.FC = () => {
             <Input
                 id="roomName"
                 value={name}
-                className="col-span-3"
+                className="col-span-1"
                 onChange={handleJoinRoom}
                 placeholder="Enter room name"
             />
