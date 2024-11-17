@@ -1,6 +1,6 @@
 import { io, Socket } from "socket.io-client";
 
-const socketUrl: string = import.meta.env.VITE_API_URL; // Replace with your backend URL
+const socketUrl: string = import.meta.env.VITE_API_URL || `ws://${import.meta.env.VITE_LOCAL_URL}`; // Replace with your backend URL
 
 if (!socketUrl) {
   throw new Error("Socket URL is not defined");
