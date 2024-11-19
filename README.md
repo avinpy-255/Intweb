@@ -1,3 +1,7 @@
+# Cosmic Code
+
+---
+
 # Realtime Code Collaboration App
 
 A **Realtime Code Collaboration App** built using **Socket.IO**, **React**, **TypeScript**, and **Node.js**, allowing users to create and join coding rooms to collaborate in real-time. This app enables multiple users to edit and share code simultaneously, enhancing the experience of working together on projects or learning collaboratively.
@@ -65,7 +69,7 @@ A **Realtime Code Collaboration App** built using **Socket.IO**, **React**, **Ty
 Follow these steps to run the project locally:
 
 ### **Prerequisites:**
-- Node.js and npm/yarn installed
+- Node.js and npm/bun installed
 - Railway or similar for backend deployment (optional)
 - Vite for frontend development
 
@@ -74,5 +78,5 @@ Follow these steps to run the project locally:
 ### **1. Clone the Repository**
 
 ```bash
-git clone https://github.com/your-username/your-repository.git
-cd your-repository
+git clone https://github.com/avinpy-255/cosmic-code-frontend
+cd cosmic-code-frontend
